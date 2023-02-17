@@ -13,7 +13,7 @@ We focus on a pair of typical heterogeneous modalities, audio and visual modalit
 
 We find that **the underutilization of not only model capacity, but also model knowledge limits the potential of the pre-trained model** in the multi-modal scenario, as shown in the following figure.
 
-![](E:\Revisiting-Pre-training-in-Audio-Visual-Learning\demo\findings.png)
+![](https://raw.githubusercontent.com/GeWu-Lab/Revisiting-Pre-training-in-Audio-Visual-Learning/main/demo/findings.png)
 
 ## Why are the pre-trained models underutilized?
 
@@ -23,7 +23,7 @@ We discover that the absolute value of some parameter pairs ($\lvert\gamma_k\rve
 
 In experiments we find that the channels with abnormal Batchnorm parameters are more likely to produce “**dead features** ” after ReLU. This phenomenon does not merely exist for particular samples or classes but for most samples, indicating the channels are hard to be activated.  We name these channels as “**dead channels**”. The abnormal $\gamma_k$ also slows down the back-propagation of gradients. Thus, the corresponding filters in Conv-BN-ReLU structure are **difficult to be updated**.
 
-![](E:\Revisiting-Pre-training-in-Audio-Visual-Learning\demo\bn_problem.png)
+![](https://raw.githubusercontent.com/GeWu-Lab/Revisiting-Pre-training-in-Audio-Visual-Learning/main/demo/bn_problem.png)
 
 ### In multi-modal joint learning
 
@@ -37,7 +37,7 @@ Recent work preliminarily pointed out that high-quality predictions of one modal
 
 We propose **Adaptive Batchnorm Re-initialization (ABRi)** to minimize the negative impact of abnormal parameters while ensuring coordination. An additional initialized Batchnorm layer is adaptively combined with each original Batchnorm layer.
 
-![](E:\Revisiting-Pre-training-in-Audio-Visual-Learning\demo\abri.png)
+![](https://raw.githubusercontent.com/GeWu-Lab/Revisiting-Pre-training-in-Audio-Visual-Learning/main/demo/abri.png)
 
 ### For multi-modal joint learning
 
@@ -48,7 +48,7 @@ We propose a **Two-stage Fusion Tuning (FusT)** strategy:
 
 The difficulty of the samples reflected by the sample-wise mean confidence in Stage 1.
 
-![](E:\Revisiting-Pre-training-in-Audio-Visual-Learning\demo\fust.png)
+![](https://raw.githubusercontent.com/GeWu-Lab/Revisiting-Pre-training-in-Audio-Visual-Learning/main/demo/fust.png)
 
 Our proposed methods are simple and intuitive attempts. We hope these could inspire future works.
 
