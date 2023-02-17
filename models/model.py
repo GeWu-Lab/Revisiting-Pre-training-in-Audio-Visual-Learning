@@ -112,10 +112,10 @@ class VisualClassifier(nn.Module):
         elif args.model == 'resnet34':
             self.visual_net = resnet34(imagenet_pretrained= imagenet_pretrain)
             self.fc = nn.Linear(512, n_classes)
-        elif args.model == 'resnet18':
+        elif args.model == 'resnet18_abri':
             self.visual_net = abri_resnet18(imagenet_pretrained= imagenet_pretrain, fusion=args.fusion, fus_weight= args.alpha)
             self.fc = nn.Linear(512, n_classes)
-        elif args.model == 'resnet34':
+        elif args.model == 'resnet34_abri':
             self.visual_net = abri_resnet34(imagenet_pretrained= imagenet_pretrain, fusion=args.fusion, fus_weight= args.alpha)
             self.fc = nn.Linear(512, n_classes)
 
